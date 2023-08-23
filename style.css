@@ -1,0 +1,846 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navcontainer{
+   background-image: url(images/portfolio-bg.png);
+   width: 100%;
+   height: 100vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+/*.navcontainer nav{
+    display: flex;
+    width: 100%;
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+}
+.navcontainer ul{
+    margin-top: -10%;
+    background-color: rgb(0,0,0,0.7);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    display: none;
+    z-index: 1;
+}
+.navcontainer ul li{
+    list-style-type: none;
+    padding-top: 30px;
+}
+.navcontainer ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    padding-left: 30px;
+}
+#check{
+    display: none;
+}
+.checkbtn{
+    cursor: pointer;
+ 
+}
+#check:checked ~ .navcontainer ul{
+    display: block;
+}*/
+.navcontainer nav{
+    width: 100%;
+    align-items: center;
+    height: 10vh;
+    position: fixed;
+    z-index: 1;
+}
+nav .logo{
+    padding: 20px 20px;
+    width: 170px;
+}
+nav .checkbtn img{
+    padding: 20px 20px;
+    width: 110px;
+    z-index: 10;
+    position: relative;
+}
+nav ul{
+    margin-top: -4.4%;
+    margin-left: -110%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+    position: relative;
+    font-family: sans-serif;
+}
+nav ul li{
+    list-style-type: none;
+    padding-top: 25px;
+    text-align: center;
+    transform: translatey(300%);
+}
+nav ul .h{
+    padding-left: 100px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+.mycheckbox{
+    display: none;
+}
+.checkbtn{
+    float: right;
+    cursor: pointer;
+}
+#mycheck:checked ~ ul{
+    display: block;
+    margin-left: 0;   
+}
+.content{
+    width: 100%;
+    padding-top: 100px;
+    padding-left: 150px;
+    display: flex;  
+}
+.content .heading{
+    width: 40%;
+    margin-top: 80px;
+}
+.content .heading h1{
+    font-size: 4.5rem;
+    line-height: 95px;
+    letter-spacing: 1.5px;
+    color: rgb(99, 19, 19);
+    font-family: sans-serif;
+}
+.content .heading p{
+    font-size: 23px;
+    padding-top: 30px;
+    color: rgb(59, 56, 56);
+    font-family: sans-serif;
+}
+.content .heading button{
+    outline: none;
+    border: none;
+    margin-top: 40px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    background-color: rgb(99, 19, 19);
+    z-index: -1;
+}
+.content .heading button a{
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+.content .heading .btn1{
+    background-color: white;
+    margin-left: 30px;
+    transition: 0.5s;
+}
+.content .heading .btn1 a{
+    color: black;
+}
+.content .heading .btn1:hover{
+    background-color: rgb(99, 19, 19);
+}
+.content .heading .btn1 a:hover{
+    color: white;
+}
+
+.content .image{
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 80px;
+}
+.content .image img{
+    padding-left: 80px;
+    margin-top: 60px;
+    width: 100%;
+}
+.video{
+    background-image: url(images/img-2.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30vh;
+    top: 88%;
+    display: flex;  
+    position: absolute;
+}
+.video p{
+    font-size: 23px;
+    margin-top: 75px;
+    font-family: sans-serif;
+    margin-left: 30px;
+}
+.slider{
+    margin-top: 90px;
+    margin-left: 50px;
+}
+.slider a{
+    background-color: rgb(99, 19, 19) ;
+    padding: 30px 30px;
+    border-radius: 200%;
+}
+.slider .a2{
+    background-color: rgb(5, 5, 27);
+    margin-left: 10px;
+}
+.carousel {
+   
+    overflow: hidden;
+    width:100%;
+  }
+
+  .carousel-item {
+    animation: slide 7s infinite;
+  }
+
+  .carousel-item {
+    width: 100%;
+  }
+
+  @keyframes slide {
+    0%{
+      transform: translateX(100%);
+    }
+  }
+@media only screen and (max-width:760px){
+    .navcontainer{
+        width: 100%;
+        height: auto;
+    }
+    nav{
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+    }
+    nav ul{
+        top: -75%;
+    }
+    nav ul .h{
+        margin-left: -100px;
+    }
+    .content{
+        width: 100%;
+        padding: 150px 20px;
+        display: block;
+    }
+    .content .heading{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .content .heading h1{
+        font-size: 23px;
+        line-height: 0;
+        letter-spacing: 0;
+        font-weight: 700;
+    }
+    .content .image{
+        width: 100%;
+    }
+    .content .image img{
+        width: 640px;
+        padding-left: 0;
+        margin-left: -20px;
+    }
+    .video{
+        display: none;
+    }
+}
+/*..................................................................................*/
+#What{
+    margin-top: 15%;
+    padding: 0 150px;
+    margin-bottom: 50px;
+}
+.container h1{
+    font-size: 4rem;
+    font-family: sans-serif;
+    position: relative;
+}
+.container h1::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    height: 2px;
+    width: 700px;
+    top: 35px;
+}
+.container .box{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 40px;
+    margin-top: 10%;
+}
+.container .box1{
+    background-color: #f4f1c3;
+    transition: 0.5s;
+}
+.container .box1 img{
+    margin-top: -50px;
+    margin-left: 30px;
+    width: 130px;
+}
+.container .box1 h4{
+    padding: 0 30px;
+    padding-top: 60px;
+    font-size: 1.9rem;
+    font-family: sans-serif;
+}
+.container .box1 p{
+    padding: 20px 30px;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    line-height: 32px;
+}
+.container .box1:hover{
+background-color: rgb(83, 17, 17);
+color: white;
+}
+@media only screen and (max-width:760px){
+    #What{
+        width: 100%;
+        padding: 50px 20px;
+    }
+    .container h1{
+        font-size: 30px;
+        padding-bottom: 50px;
+    }
+    .container h1::after{
+        display: none;
+    }
+    .container .box{
+        display: block;
+    }
+    .container .box1 img{
+        width: 100px;
+    }
+    .container .box .box1{
+        margin-top: 90px;
+    }
+}
+/*.......................................................................................................*/
+#about{
+    width: 100%;
+    padding: 0 150px;
+    margin-top: 150px;
+    display: flex;
+    margin-bottom: 50px;
+}
+#about .image1{
+    width: 50%;
+}
+#about .para{
+    width: 45%;
+    margin-left: 50px;
+}
+#about .para h1{
+    font-size: 3.5rem;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+#about .para p{
+    font-size: 21px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: sans-serif;
+    line-height: 30px;
+    color: rgb(48, 45, 45);
+    letter-spacing:0.7px;
+    word-spacing: 2px ;
+}
+#about .para .btn2{
+    outline: none;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 50px;
+    background-color: rgb(99, 19, 19);
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+@media only screen and (max-width:760px){
+    #about{
+        width: 100%;
+        padding: 0 20px;
+        margin: 0;
+        display:flex;
+        flex-direction: column-reverse;
+    }
+    #about .image1{
+        width: 100%;
+    }
+    #about .image1 img{
+        width: 600px;
+    }
+    #about .para{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+}
+/*.................................................*/
+#work{
+    margin-top: 100px;
+}
+#work h1{
+    font-size: 3.8rem;
+    font-family: sans-serif;
+    position: relative;
+    padding-bottom: 70px;
+    padding-left: 150px;
+}
+#work h1::after{
+    content: '';
+    position: absolute;
+    width: 700px;
+    height: 2px;
+    background-color: black;
+    top: 34px;
+}
+#work .change .photo{
+    margin-top: -10px;
+    position: relative;
+} 
+#work .change .photo img{
+    width: 599px;
+    height: 400px;
+}
+#work .change .photo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    transition: 0.5s;
+}
+#work .change .photo:hover::before{
+    background-color:  rgb(99, 19, 19,0.80);
+}
+#work .change .photo .search{
+    position: absolute;
+    bottom: 40%;
+    left: 40%;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    opacity: 0;
+    transition: 0.5s;
+}
+#work .change .photo .search i{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    padding-top: 25px;
+    background-color: antiquewhite;
+    text-align: center;
+}
+#work .change .photo:hover .search{
+    opacity: 1;
+}
+#work .change{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap:0px
+}
+@media only screen and (max-width:760px){
+    #work{
+        width: 100%;
+    }
+    #work h1{
+        padding-left: 20px;
+        font-size: 30px;
+    }
+    #work h1::after{
+        display: none;
+    }
+    #work .change{
+        display: block;
+    }
+    #work .change .photo img{
+        width: 100%;
+    }
+}
+/*.......................................................................................................................................................*/
+#pro{
+    background-image: url(images/portfolio-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pro .content1{
+    width: 60%;
+    text-align: center;
+    margin-top: -100px;
+}
+#pro .content1 h1{
+    font-size: 3.8rem;
+    line-height: 80px;
+    font-weight: 800;
+    color: rgb(27, 27, 27);
+    font-family: sans-serif;
+}
+#pro .content1 p{
+    font-size: 25px;
+    padding-top: 50px;
+    line-height: 35px;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+#pro .btn3{
+    border: none;
+    margin-top: 50px;
+    font-size: 25px;
+    padding: 17px 150px;
+    border-radius: 70px;
+    color: white;
+    background-color:  rgb(99, 19, 19);
+}
+@media only screen and (max-width:760px){
+    #pro{
+        width: 100%;
+    }
+    #pro .content1{
+        width: 100%;
+        padding-top: 100px;
+    }
+    #pro .content1 h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+/*.................................................*/
+#consult{
+    width: 100%;
+    padding: 100px 150px;
+}
+#consult h1{
+    font-size: 3.8rem;
+    font-family: sans-serif;
+    position: relative;
+    padding-bottom: 70px;
+}
+#consult h1::after{
+    content: '';
+    position: absolute;
+    width: 700px;
+    height: 1px;
+    background-color: black;
+    top: 37px;
+}
+.consult{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.para1{
+    width: 50%;
+    padding-top: 150px;
+}
+.para1 p{
+    font-size: 23px;
+    word-spacing: 1px;
+    line-height: 33px;
+    font-family: 'Open Sans', sans-serif;
+}
+.para1 .btn4{
+    margin-top: 100px;
+    font-size: 25px;
+    padding: 15px 45px;
+    border-radius: 30px;
+    border: none;
+    background-color:  rgb(99, 19, 19);
+    color: white;
+}
+.consult .photo1{
+    width: 50%;
+}
+.consult .photo1 img{
+    width: 750px;
+}
+@media only screen and (max-width:760px){
+    #consult{
+        width: 100%;
+        padding: 100px 20px;
+    }
+    #consult h1{
+        font-size: 30px;
+    }
+    #consult h1::after{
+        display: none;
+    }
+    .consult{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .consult .para1{
+        width: 100%;
+    }
+    .consult .photo1 img{
+        width: 600px;
+    }
+    .consult .photo1{
+        width: 100%;
+    }
+}
+/*............................................................*/
+#client{
+    padding: 50px 150px;
+}
+#client h1{
+    font-size: 3.8rem;
+    font-family: sans-serif;
+    position: relative;
+    padding-bottom: 70px;
+}
+#client h1::after{
+    content: '';
+    position: absolute;
+    width: 700px;
+    height: 1px;
+    background-color: black;
+    top: 37px;
+}
+.content2{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+}
+.content2 .small p{
+    border: 1px solid black;
+    font-size: 25px;
+    color: rgb(105, 103, 101);
+    padding: 25px 25px;
+    line-height: 35px;
+    text-align: left;   
+    font-family: 'Open Sans', sans-serif; 
+}
+.small .image2{
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+}
+.small .image2 img{
+    width: 100px;
+}
+.small .image2 h2{
+    padding-left: 20px;
+    font-size: 30px;
+    color: rgb(43, 40, 40);
+    font-weight: 900;
+    font-family: 'Open Sans', sans-serif;
+}
+.input input{
+    transform: translatex(1000%);
+    margin-top: 100px;
+    margin-left: 20px;
+    padding: 0px 1px;
+    width: 60px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color:  rgb(99, 19, 19);
+    border: none;
+}
+.input #text1{
+    background-color: rgb(223, 224, 127);
+}
+@media only screen and (max-width:760px){
+    #client{
+        width: 100%;
+        padding: 0 20px;
+    }
+    #client h1{
+        font-size: 30px;
+    }
+    #client h1::after{
+        display: none;
+    }
+    .content2{
+        display: block;
+    }
+    .content2 .image2{
+        padding-bottom: 30px;
+    }
+    .input input{
+        transform: translatex(250%);
+    }
+}
+/*.....................................*/
+#request{
+    padding: 100px 400px;
+}
+#request .request{
+    width: 100%;
+    text-align: center;
+}
+#request .request h1{
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgb(31, 30, 30);
+    padding-bottom: 40px;
+    font-family: 'Open Sans', sans-serif; 
+}
+#request .request p{
+    font-size: 23px;
+    padding-bottom: 30px;
+    font-family: 'Open Sans', sans-serif; 
+}
+#request .request form input{
+   padding: 15px 30px;
+   font-size: 23px;
+   text-align:left;
+   border-radius: 30px;
+   margin-top: 40px;
+   width: 600px;
+   border: 1px solid rgb(104, 102, 102);
+}
+form textarea{
+    border-radius: 50px;
+    margin-top: 50px;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 20px;
+    font-size: 23px;
+}
+form .btn5{
+    font-size: 23px;
+    margin-top: 50px;
+    border: none;
+    background-color: rgb(226, 215, 113);
+    padding: 20px 100px;
+    border-radius: 40px;
+    color: white;
+}
+@media only screen and (max-width:760px){
+    #request{
+        width: 100%;
+        padding: 100px 0;
+    }
+}
+/*.............................................................*/
+#contact{
+    background-color:  rgb(99, 19, 19);
+    color: white;
+    padding: 100px 140px;
+    display: flex;
+    justify-content: space-around;
+}
+#contact h2{
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 200;
+    padding-bottom: 20px;
+}
+#contact .contact p{
+    font-size: 24px;
+    line-height: 35px;
+    font-family: sans-serif;
+}
+#contact .contact{
+    width: 15%;
+    text-align: left;
+}
+.quick ul li{ 
+   list-style-type: none;
+   padding-top: 13px;
+   font-family: sans-serif;
+}
+.quick ul li a{
+    text-decoration: none;
+    font-size: 23px;
+    color: white;
+   
+}
+.news{
+    width: 50%;
+}
+.new{
+ display: block;
+}
+.new1{
+    display: flex;
+    justify-content: space-between;
+}
+.new h1{
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 200;
+    padding-bottom: 20px;
+}
+.new input{
+    width: 750px;
+    margin-top: 40px;
+    padding: 15px 20px;
+    font-size: 25px;
+    border-radius: 30px;
+    border: 2px solid white;
+    background-color:  rgb(99, 19, 19);
+}
+.new1 .icon img{
+    margin-left: 20px;
+}
+.new input::placeholder{
+    color: white;
+}
+.btn6{
+    font-size: 23px;
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background-color: rgb(226, 215, 113);
+}
+.para2{
+    font-size: 23px;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+@media only screen and (max-width:760px){
+    #contact{
+        width: 100%;
+        padding: 100px 20px;
+        display: block;
+    }
+    #contact .contact{
+        width: 70%;
+        margin-bottom: 60px;
+    }
+    #contact .quick{
+        margin-bottom: 60px;
+    }
+    #contact .news{
+        width: 100%;
+    }
+    .new form{
+        display: block;
+    }
+    .new input{
+        width: 600px;
+    }
+
+}
